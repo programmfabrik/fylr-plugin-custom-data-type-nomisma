@@ -1,0 +1,61 @@
+key,de-DE,en-US
+custom.data.type.nomisma.name,Nomisma-Verknüpfung,Nomisma-Link
+custom.data.type.nomisma.no_hit,kein Treffer,no hit
+custom.data.type.nomisma.edit.no_nomisma,Keine Nomisma-Verknüpfung gesetzt,No Nomisma-Link
+custom.data.type.nomisma.edit.no_valid_nomisma,Keine valide Nomisma-Verknüpfung,No valid Nomisma-Link
+custom.data.type.nomisma.edit.button|icon,edit,edit
+custom.data.type.nomisma.remove.button|icon,trash,trash
+custom.data.type.nomisma.url.tooltip,zu **%(name)s** springen,jump to **%(name)s**
+custom.data.type.nomisma.modal.form.text.count,Anzahl Vorschläge,Count of suggestions
+custom.data.type.nomisma.modal.form.text.count_short,Vorschläge,Suggestions
+custom.data.type.nomisma.modal.form.text.label,Text,Text
+custom.data.type.nomisma.modal.form.text.searchbar,Suchbegriff eingeben,Enter search query
+custom.data.type.nomisma.modal.form.text.searchbar.placeholder,Suchbegriff eingeben ...,Enter search query...
+custom.data.type.nomisma.modal.form.text.type,Suche auf Typ einschränken,Narrow down search to type
+custom.data.type.nomisma.modal.form.text.searchfield,Datenset,Dataset
+custom.data.type.nomisma.modal.form.popup.loadingstring,lade Informationen,loading information
+custom.data.type.nomisma.config.parameter.schema.schema.value.label,Schema,Scheme
+custom.data.type.nomisma.config.parameter.mask.infopop.info.label,Informationen über den Datensatz,Informations about the record
+custom.data.type.nomisma.config.parameter.mask.infopop.labels.preflabel,Bezeichnung,Preferred label
+custom.data.type.nomisma.config.parameter.mask.infopop.labels.varlabel,Variante,Variant
+custom.data.type.nomisma.config.parameter.mask.infopop.labels.uri,Identifier,Identifier
+custom.data.type.nomisma.config.parameter.mask.infopop.labels.broader,Umfassendere Begriffe,Broader Terms
+custom.data.type.nomisma.config.parameter.mask.editor_display.value.label,Editor-Ansicht,Editor-Display
+custom.data.type.nomisma.config.option.mask.editor_display.value.default,Standard,Default
+custom.data.type.nomisma.config.option.mask.editor_display.value.condensed,1 Zeile,One-liner
+custom.data.type.nomisma.config.parameter.schema.crro.value.label,CRRO,CRRO
+custom.data.type.nomisma.config.parameter.schema.crro.value.label_long,CRRO (Coinage of the Roman Republic Online),CRRO (Coinage of the Roman Republic Online)
+custom.data.type.nomisma.config.parameter.schema.crro.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.schema.ocre.value.label,OCRE,OCRE
+custom.data.type.nomisma.config.parameter.schema.ocre.value.label_long,OCRE (Online Coins of the Roman Empire),OCRE (Online Coins of the Roman Empire)
+custom.data.type.nomisma.config.parameter.schema.ocre.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.schema.pella.value.label,PELLA,PELLA
+custom.data.type.nomisma.config.parameter.schema.pella.value.label_long,PELLA (Coinage of the kings of macedonia),PELLA (Coinage of the kings of macedonia)
+custom.data.type.nomisma.config.parameter.schema.pella.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.schema.aod.value.label,AOD,AOD
+custom.data.type.nomisma.config.parameter.schema.aod.value.label_long,AOD (Art of Devastation. Medallic Art of the Great War),AOD (Art of Devastation. Medallic Art of the Great War)
+custom.data.type.nomisma.config.parameter.schema.aod.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.schema.sco.value.label,SCO,SCO
+custom.data.type.nomisma.config.parameter.schema.sco.value.label_long,SCO (Seleucid Coins Online),SCO (Seleucid Coins Online)
+custom.data.type.nomisma.config.parameter.schema.sco.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.schema.pco.value.label,PCO,PCO
+custom.data.type.nomisma.config.parameter.schema.pco.value.label_long,PCO (Ptolemaic Coins Online),PCO (Ptolemaic Coins Online)
+custom.data.type.nomisma.config.parameter.schema.pco.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.schema.oscar.value.label,OSCAR,OSCAR
+custom.data.type.nomisma.config.parameter.schema.oscar.value.label_long,OSCAR (Online Swiss Coin Archive),OSCAR (Online Swiss Coin Archive)
+custom.data.type.nomisma.config.parameter.schema.oscar.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.schema.bigr.value.label,BIGR,BIGR
+custom.data.type.nomisma.config.parameter.schema.bigr.value.label_long,BIGR (Bactrian and Indo-Greek Rulers),BIGR (Bactrian and Indo-Greek Rulers)
+custom.data.type.nomisma.config.parameter.schema.bigr.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.schema.coi.value.label,COI,COI
+custom.data.type.nomisma.config.parameter.schema.coi.value.label_long,COI (Coins of Ostrogothic Italy),COI (Coins of Ostrogothic Italy)
+custom.data.type.nomisma.config.parameter.schema.coi.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.schema.iacb.value.label,IACB,IACB
+custom.data.type.nomisma.config.parameter.schema.iacb.value.label_long,IACB (Iron Age Coins in Britain),IACB (Iron Age Coins in Britain)
+custom.data.type.nomisma.config.parameter.schema.iacb.value.checkbox,Nutzen?,Use?
+server.config.name.system.update_nomisma,Nomisma-Update-Einstellungen,Nomisma-Update-Configuration
+server.config.parameter.system.update_nomisma.restrict_time.label,Beschränke Updates auf bestimmte Stunden?,Restrict updates to specific hours?
+server.config.parameter.system.update_nomisma.restrict_time.checkbox,Ja - beschränken,Yes - restrict
+server.config.parameter.system.update_nomisma.from_time.label,Stunde von (Zahl 0-24),Hour from (Int 0-24)
+server.config.parameter.system.update_nomisma.to_time.label,Stunde bis (Zahl 0-24),Hour to (Int 0-24)
+server.config.parameter.system.update_nomisma.default_language.label,Standard-Datensprache als Fallback für Update (ISO 639-1),Default-data-language (as fallback) for update (ISO 639-1)
