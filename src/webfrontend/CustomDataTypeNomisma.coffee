@@ -218,7 +218,7 @@ class CustomDataTypeNomisma extends CustomDataTypeWithCommonsAsPlugin
         if that.getCustomMaskSettings()[type]?.value
           option = (
               value: type
-              text: $$('custom.data.type.nomisma.config.parameter.schema.' + type + '.value.label_long')
+              text: $$('custom.data.type.nomisma.config.parameter.mask.' + type + '.value.label_long')
             )
           searchOptions.push option
 
