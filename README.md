@@ -29,6 +29,9 @@ This plugin requires https://github.com/programmfabrik/fylr-plugin-commons-libra
 As defined in `manifest.master.yml` this datatype can be configured:
 
 ### Schema options
+  * none
+
+### Mask options
   * search crro?
   * search ocre?
   * search pella?
@@ -39,9 +42,6 @@ As defined in `manifest.master.yml` this datatype can be configured:
   * search bigr?
   * search coi?
   * search iacb?
-
-### Mask options
-  * none
 
 ## saved data
 * conceptName
