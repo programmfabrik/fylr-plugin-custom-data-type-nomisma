@@ -28,6 +28,13 @@ custom_types:
         type: text_l10n
     config:
       schema:
+
+      mask:
+        - name: editor_display
+          parameters:
+            value:
+              type: select
+              options: ["default", "condensed"]
         - name: crro
           parameters:
             value:
@@ -68,12 +75,6 @@ custom_types:
           parameters:
             value:
               type: bool
-      mask:
-        - name: editor_display
-          parameters:
-            value:
-              type: select
-              options: ["default", "condensed"]
 
     update:
       plugin_user:

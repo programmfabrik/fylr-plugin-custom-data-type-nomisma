@@ -23,36 +23,36 @@ custom.data.type.nomisma.config.parameter.mask.infopop.labels.broader,Umfassende
 custom.data.type.nomisma.config.parameter.mask.editor_display.value.label,Editor-Ansicht,Editor-Display
 custom.data.type.nomisma.config.option.mask.editor_display.value.default,Standard,Default
 custom.data.type.nomisma.config.option.mask.editor_display.value.condensed,1 Zeile,One-liner
-custom.data.type.nomisma.config.parameter.schema.crro.value.label,CRRO,CRRO
-custom.data.type.nomisma.config.parameter.schema.crro.value.label_long,CRRO (Coinage of the Roman Republic Online),CRRO (Coinage of the Roman Republic Online)
-custom.data.type.nomisma.config.parameter.schema.crro.value.checkbox,Nutzen?,Use?
-custom.data.type.nomisma.config.parameter.schema.ocre.value.label,OCRE,OCRE
-custom.data.type.nomisma.config.parameter.schema.ocre.value.label_long,OCRE (Online Coins of the Roman Empire),OCRE (Online Coins of the Roman Empire)
-custom.data.type.nomisma.config.parameter.schema.ocre.value.checkbox,Nutzen?,Use?
-custom.data.type.nomisma.config.parameter.schema.pella.value.label,PELLA,PELLA
-custom.data.type.nomisma.config.parameter.schema.pella.value.label_long,PELLA (Coinage of the kings of macedonia),PELLA (Coinage of the kings of macedonia)
-custom.data.type.nomisma.config.parameter.schema.pella.value.checkbox,Nutzen?,Use?
-custom.data.type.nomisma.config.parameter.schema.aod.value.label,AOD,AOD
-custom.data.type.nomisma.config.parameter.schema.aod.value.label_long,AOD (Art of Devastation. Medallic Art of the Great War),AOD (Art of Devastation. Medallic Art of the Great War)
-custom.data.type.nomisma.config.parameter.schema.aod.value.checkbox,Nutzen?,Use?
-custom.data.type.nomisma.config.parameter.schema.sco.value.label,SCO,SCO
-custom.data.type.nomisma.config.parameter.schema.sco.value.label_long,SCO (Seleucid Coins Online),SCO (Seleucid Coins Online)
-custom.data.type.nomisma.config.parameter.schema.sco.value.checkbox,Nutzen?,Use?
-custom.data.type.nomisma.config.parameter.schema.pco.value.label,PCO,PCO
-custom.data.type.nomisma.config.parameter.schema.pco.value.label_long,PCO (Ptolemaic Coins Online),PCO (Ptolemaic Coins Online)
-custom.data.type.nomisma.config.parameter.schema.pco.value.checkbox,Nutzen?,Use?
-custom.data.type.nomisma.config.parameter.schema.oscar.value.label,OSCAR,OSCAR
-custom.data.type.nomisma.config.parameter.schema.oscar.value.label_long,OSCAR (Online Swiss Coin Archive),OSCAR (Online Swiss Coin Archive)
-custom.data.type.nomisma.config.parameter.schema.oscar.value.checkbox,Nutzen?,Use?
-custom.data.type.nomisma.config.parameter.schema.bigr.value.label,BIGR,BIGR
-custom.data.type.nomisma.config.parameter.schema.bigr.value.label_long,BIGR (Bactrian and Indo-Greek Rulers),BIGR (Bactrian and Indo-Greek Rulers)
-custom.data.type.nomisma.config.parameter.schema.bigr.value.checkbox,Nutzen?,Use?
-custom.data.type.nomisma.config.parameter.schema.coi.value.label,COI,COI
-custom.data.type.nomisma.config.parameter.schema.coi.value.label_long,COI (Coins of Ostrogothic Italy),COI (Coins of Ostrogothic Italy)
-custom.data.type.nomisma.config.parameter.schema.coi.value.checkbox,Nutzen?,Use?
-custom.data.type.nomisma.config.parameter.schema.iacb.value.label,IACB,IACB
-custom.data.type.nomisma.config.parameter.schema.iacb.value.label_long,IACB (Iron Age Coins in Britain),IACB (Iron Age Coins in Britain)
-custom.data.type.nomisma.config.parameter.schema.iacb.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.mask.crro.value.label,CRRO,CRRO
+custom.data.type.nomisma.config.parameter.mask.crro.value.label_long,CRRO (Coinage of the Roman Republic Online),CRRO (Coinage of the Roman Republic Online)
+custom.data.type.nomisma.config.parameter.mask.crro.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.mask.ocre.value.label,OCRE,OCRE
+custom.data.type.nomisma.config.parameter.mask.ocre.value.label_long,OCRE (Online Coins of the Roman Empire),OCRE (Online Coins of the Roman Empire)
+custom.data.type.nomisma.config.parameter.mask.ocre.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.mask.pella.value.label,PELLA,PELLA
+custom.data.type.nomisma.config.parameter.mask.pella.value.label_long,PELLA (Coinage of the kings of macedonia),PELLA (Coinage of the kings of macedonia)
+custom.data.type.nomisma.config.parameter.mask.pella.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.mask.aod.value.label,AOD,AOD
+custom.data.type.nomisma.config.parameter.mask.aod.value.label_long,AOD (Art of Devastation. Medallic Art of the Great War),AOD (Art of Devastation. Medallic Art of the Great War)
+custom.data.type.nomisma.config.parameter.mask.aod.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.mask.sco.value.label,SCO,SCO
+custom.data.type.nomisma.config.parameter.mask.sco.value.label_long,SCO (Seleucid Coins Online),SCO (Seleucid Coins Online)
+custom.data.type.nomisma.config.parameter.mask.sco.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.mask.pco.value.label,PCO,PCO
+custom.data.type.nomisma.config.parameter.mask.pco.value.label_long,PCO (Ptolemaic Coins Online),PCO (Ptolemaic Coins Online)
+custom.data.type.nomisma.config.parameter.mask.pco.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.mask.oscar.value.label,OSCAR,OSCAR
+custom.data.type.nomisma.config.parameter.mask.oscar.value.label_long,OSCAR (Online Swiss Coin Archive),OSCAR (Online Swiss Coin Archive)
+custom.data.type.nomisma.config.parameter.mask.oscar.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.mask.bigr.value.label,BIGR,BIGR
+custom.data.type.nomisma.config.parameter.mask.bigr.value.label_long,BIGR (Bactrian and Indo-Greek Rulers),BIGR (Bactrian and Indo-Greek Rulers)
+custom.data.type.nomisma.config.parameter.mask.bigr.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.mask.coi.value.label,COI,COI
+custom.data.type.nomisma.config.parameter.mask.coi.value.label_long,COI (Coins of Ostrogothic Italy),COI (Coins of Ostrogothic Italy)
+custom.data.type.nomisma.config.parameter.mask.coi.value.checkbox,Nutzen?,Use?
+custom.data.type.nomisma.config.parameter.mask.iacb.value.label,IACB,IACB
+custom.data.type.nomisma.config.parameter.mask.iacb.value.label_long,IACB (Iron Age Coins in Britain),IACB (Iron Age Coins in Britain)
+custom.data.type.nomisma.config.parameter.mask.iacb.value.checkbox,Nutzen?,Use?
 server.config.name.system.update_nomisma,Nomisma-Update-Einstellungen,Nomisma-Update-Configuration
 server.config.parameter.system.update_nomisma.restrict_time.label,Beschränke Updates auf bestimmte Stunden?,Restrict updates to specific hours?
 server.config.parameter.system.update_nomisma.restrict_time.checkbox,Ja - beschränken,Yes - restrict

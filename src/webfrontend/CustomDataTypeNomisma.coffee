@@ -105,25 +105,25 @@ class CustomDataTypeNomisma extends CustomDataTypeWithCommonsAsPlugin
         else
           # if no form, search in first type and with default count
           nomisma_countSuggestions = 20
-          if that.getCustomSchemaSettings().crro?.value
+          if that.getCustomMaskSettings().crro?.value
             nomisma_set = 'crro'
-          else if that.getCustomSchemaSettings().ocre?.value
+          else if that.getCustomMaskSettings().ocre?.value
             nomisma_set = 'ocre'
-          else if that.getCustomSchemaSettings().aod?.value
+          else if that.getCustomMaskSettings().aod?.value
             nomisma_set = 'aod'
-          else if that.getCustomSchemaSettings().sco?.value
+          else if that.getCustomMaskSettings().sco?.value
             nomisma_set = 'sco'
-          else if that.getCustomSchemaSettings().pella?.value
+          else if that.getCustomMaskSettings().pella?.value
             nomisma_set = 'pella'
-          else if that.getCustomSchemaSettings().pco?.value
+          else if that.getCustomMaskSettings().pco?.value
             nomisma_set = 'pco'
-          else if that.getCustomSchemaSettings().oscar?.value
+          else if that.getCustomMaskSettings().oscar?.value
             nomisma_set = 'oscar'
-          else if that.getCustomSchemaSettings().bigr?.value
+          else if that.getCustomMaskSettings().bigr?.value
             nomisma_set = 'bigr'
-          else if that.getCustomSchemaSettings().coi?.value
+          else if that.getCustomMaskSettings().coi?.value
             nomisma_set = 'coi'
-          else if that.getCustomSchemaSettings().iacb?.value
+          else if that.getCustomMaskSettings().iacb?.value
             nomisma_set = 'iacb'
 
         if nomisma_searchterm.length == 0
@@ -215,7 +215,7 @@ class CustomDataTypeNomisma extends CustomDataTypeWithCommonsAsPlugin
 
     for type in possibleTypes
       do (type) ->
-        if that.getCustomSchemaSettings()[type]?.value
+        if that.getCustomMaskSettings()[type]?.value
           option = (
               value: type
               text: $$('custom.data.type.nomisma.config.parameter.schema.' + type + '.value.label_long')
@@ -327,57 +327,7 @@ class CustomDataTypeNomisma extends CustomDataTypeWithCommonsAsPlugin
   #######################################################################
   # zeige die gewählten Optionen im Datenmodell unter dem Button an
   getCustomDataOptionsInDatamodelInfo: (custom_settings) ->
-    @
     tags = []
-    if custom_settings.crro?.value
-      tags.push "✓ CRRO"
-    else
-      tags.push "✘ CRRO"
-
-    if custom_settings.ocre?.value
-      tags.push "✓ OCRE"
-    else
-      tags.push "✘ OCRE"
-
-    if custom_settings.aod?.value
-      tags.push "✓ AOD"
-    else
-      tags.push "✘ AOD"
-
-    if custom_settings.pco?.value
-      tags.push "✓ PCO"
-    else
-      tags.push "✘ PCO"
-
-    if custom_settings.pella?.value
-      tags.push "✓ PELLA"
-    else
-      tags.push "✘ PELLA"
-
-    if custom_settings.sco?.value
-      tags.push "✓ SCO"
-    else
-      tags.push "✘ SCO"
-
-    if custom_settings.oscar?.value
-      tags.push "✓ OSCAR"
-    else
-      tags.push "✘ OSCAR"
-
-    if custom_settings.bigr?.value
-      tags.push "✓ BIGR"
-    else
-      tags.push "✘ BIGR"
-
-    if custom_settings.coi?.value
-      tags.push "✓ COI"
-    else
-      tags.push "✘ COI"
-
-    if custom_settings.iacb?.value
-      tags.push "✓ IACB"
-    else
-      tags.push "✘ IACB"
 
     tags
 
