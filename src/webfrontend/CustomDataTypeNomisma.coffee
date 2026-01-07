@@ -60,7 +60,7 @@ class CustomDataTypeNomisma extends CustomDataTypeWithCommonsAsPlugin
     nomismaType = NomismaUtil.getNomismaTypeFromURI uri
 
     # get record by uri
-    path = location.protocol + '//uri.gbv.de/terminology/' + nomismaType + '/' + nomismaID + '?format=json'
+    path = 'https://uri.gbv.de/terminology/' + nomismaType + '/' + nomismaID + '?format=json'
 
     extendedInfo_xhr.xhr = new (CUI.XHR)(url: path)
     extendedInfo_xhr.xhr.start()
@@ -141,7 +141,7 @@ class CustomDataTypeNomisma extends CustomDataTypeWithCommonsAsPlugin
             # abort eventually running request
             searchsuggest_xhr.xhr.abort()
         # start new request
-        searchsuggest_xhr.xhr = new (CUI.XHR)(url: location.protocol + '//ws.gbv.de/suggest/numismatics.org/?searchstring=' + nomisma_searchterm + '&type=' + nomisma_set + '&count=' + nomisma_countSuggestions)
+        searchsuggest_xhr.xhr = new (CUI.XHR)(url: 'https://ws.gbv.de/suggest/numismatics.org/?searchstring=' + nomisma_searchterm + '&type=' + nomisma_set + '&count=' + nomisma_countSuggestions)
         searchsuggest_xhr.xhr.start().done((data, status, statusText) ->
 
             # create new menu with suggestions
@@ -171,8 +171,8 @@ class CustomDataTypeNomisma extends CustomDataTypeWithCommonsAsPlugin
                   nomismaType = NomismaUtil.getNomismaTypeFromURI cdata.conceptURI
 
                   # get record by uri
-                  path = '//uri.gbv.de/terminology/' + nomismaType + '/' + nomismaID + '?format=json'
-                  dataEntry_xhr = new (CUI.XHR)(url: location.protocol + path)
+                  path = 'https://uri.gbv.de/terminology/' + nomismaType + '/' + nomismaID + '?format=json'
+                  dataEntry_xhr = new (CUI.XHR)(url: path)
                   dataEntry_xhr.start().done((data, status, statusText) ->
 
                     # _standard & _fulltext
