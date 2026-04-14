@@ -63,7 +63,16 @@ function isInTimeRange(currentHour, fromHour, toHour) {
   } else { // through the night
     return currentHour >= fromHour || currentHour < toHour;
   }
-} 
+}
+
+function getNewCustomExpiresAt() {
+  const newExpiresAt = new Date()
+  const customExpirationConfig = info?.config?.plugin?.['custom-data-type-nomisma']?.config?.update_nomisma?.custom_expires_days || 1
+
+  newExpiresAt.setDate(newExpiresAt.getDate() + customExpirationConfig);
+
+  return newExpiresAt.toISOString()
+}
 
 main = (payload) => {
   console.error("main " + payload.action)
@@ -186,7 +195,11 @@ main = (payload) => {
 
               if (hasChanges(payload.objects[index].data, newCdata)) {
                 payload.objects[index].data = newCdata;
+              } else {
+                payload.objects[index].data = originalCdata
               }
+              // set expires at for the custom data object according to the plugin base config
+              payload.objects[index].data._expires_at = getNewCustomExpiresAt()
             }
           } else {
             console.error('No matching record found');
