@@ -84,7 +84,11 @@ main = (payload) => {
       // collect IDs
       let IDList = [];
       for (var i = 0; i < payload.objects.length; i++) {
-        IDList.push(payload.objects[i].data.discoveryID);
+        const parts = payload.objects[i].data.conceptURI.replace('http://numismatics.org/', '').split('/')
+        const nomismaType = parts[0]
+        const nomismaID = parts[2]
+        // put back into a string to make sure that new Set() can filter out duplicates
+        IDList.push(`${nomismaType}@${nomismaID}`);
       }
       // unique urilist
       IDList = [...new Set(IDList)]
@@ -93,8 +97,10 @@ main = (payload) => {
       let requests = [];
 
       IDList.forEach((id) => {
-
-        let dataRequestUrl = 'https://discovery.nationalarchives.gov.uk/api/records/details/' + id;
+        const parts = id.split('@')
+        const nomismaType = parts[0]
+        const nomismaID = parts[1]
+        let dataRequestUrl = 'https://uri.gbv.de/terminology/' + nomismaType + '/' + nomismaID + '?format=json'
         const options = {
           headers: {
             Accept: 'application/json',
@@ -104,7 +110,7 @@ main = (payload) => {
         let dataRequest = fetch(dataRequestUrl, options);
         requests.push({
           url: dataRequestUrl,
-          uri: 'http://discovery.nationalarchives.gov.uk/details/r/' + id,
+          uri: 'http://numismatics.org/' + nomismaType + '/id/' + nomismaID,
           request: dataRequest
         });
         requestUrls.push(dataRequest);
@@ -165,30 +171,19 @@ main = (payload) => {
           if (matchingRecordData) {
             test += "Matching Record\n"
             ///////////////////////////////////////////////////////
-            // conceptName, conceptURI, conceptSource, _standard, _fulltext, facet
+            // conceptName, conceptURI,  _standard, _fulltext
             resultObject = matchingRecordData.data;
             if (resultObject) {
               test += "resultObject OK\n"
-              // save discoveryID
-              newCdata.discoveryID = resultObject.id
-              // save discoveryURL
-              newCdata.discoveryURL = 'http://discovery.nationalarchives.gov.uk/details/r/' + resultObject.id
-              // save referenceNumber
-              newCdata.referenceNumber = resultObject.citableReference ?? ''
-              // save locationHeld
-              newCdata.locationHeld = resultObject.heldBy[0] ? resultObject.heldBy[0].xReferenceName : null
-              // save resultObject
-              newCdata.title = resultObject.title ?? ''
-              // save description + remove html tags
-              newCdata.description = resultObject.scopeContent?.description?.replace(/<\/?[^>]+(>|$)/g, "") ?? ''
               // save conceptName
-              newCdata.conceptName = resultObject.citableReference;
+              newCdata.conceptName = resultObject.Titel;
               // save conceptURI
-              newCdata.conceptURI = 'http://discovery.nationalarchives.gov.uk/details/r/' + resultObject.id;
+              newCdata.conceptURI = resultObject.uri;
               // save _fulltext
               newCdata._fulltext = NomismaUtil.getFullTextFromNomismaJSON(newCdata, databaseLanguages);
               // save _standard
               newCdata._standard = NomismaUtil.getStandardFromNomismaJSON(null, newCdata, newCdata, databaseLanguages);
+
               if (hasChanges(payload.objects[index].data, newCdata)) {
                 payload.objects[index].data = newCdata;
               }
@@ -285,14 +280,8 @@ outputErr = (err2) => {
       // availabilityCheck for Nomisma-api
       ////////////////////////////////////////////////////////////////////////////
 
-      const testURL = "https://discovery.nationalarchives.gov.uk/API/search/v1/records?sps.sortByOption=RELEVANCE&sps.resultsPageSize=1"
-      const options = {
-        headers: {
-          Accept: 'application/json',
-          'User-Agent': 'Node'
-        }
-      }
-      https.get(testURL, options, res => {
+      const testURL = "https://uri.gbv.de/terminology/crro/rrc-122.7c?format=json"
+      https.get(testURL, res => {
         let testData = [];
         res.on('data', chunk => {
           testData.push(chunk);
@@ -301,12 +290,8 @@ outputErr = (err2) => {
           testData = Buffer.concat(testData).toString();
           const testJSON = JSON.parse(testData);
 
-          if (!Array.isArray(testJSON?.records)) {
-            return console.error("Error: Json parse complete, result does not contain hits or hits is not an array.")
-          }
-
-          if (testJSON.records.length < 0) {
-            return console.error('Error: Hits array is empty.')
+          if (testJSON.uri !== 'http://numismatics.org/crro/id/rrc-122.7c') {
+            return console.error("Error: Json parse complete, result does not contain expected uri.")
           }
 
           ////////////////////////////////////////////////////////////////////////////
