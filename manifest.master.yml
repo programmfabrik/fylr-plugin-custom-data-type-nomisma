@@ -6,15 +6,17 @@ plugin:
     de-DE: Nomisma-Verknüpfung
     en-US: Nomisma-Referencing
   info:
-    de-DE: Stellt Verknüpfungen mit den Discovery-System des National Archive London her.
-    en-US: Use for references to entities of the discoverydystem of the National Archive London.
+    de-DE: |
+      Ergänzt fylr um einen Feldtyp, mit dem sich Datensätze mit dem [Nomisma-Projekt](http://nomisma.org/datasets) verknüpfen lassen – einer Sammlung stabiler Identifikatoren und Linked-Open-Data-Ressourcen für die Numismatik (Münzkunde). Redakteure durchsuchen Nomisma über den Suggest-Dienst des GBV direkt im Maskenfeld und speichern einen Verweis auf den gewählten Datensatz. Dabei lässt sich festlegen, welche der einzelnen Nomisma-Datensätze (etwa CRRO, OCRE oder PELLA) in die Suche einbezogen werden.
+    en-US: |
+      Adds a custom data type for linking records to the [Nomisma project](http://nomisma.org/datasets), a collection of stable identifiers and linked-open-data resources for numismatics (the study of coins and money). Editors search Nomisma via the GBV suggest service from a mask field and store a link to the selected record. You can choose which of the individual Nomisma datasets (such as CRRO, OCRE, or PELLA) are included in the search.
   l10n: l10n/customDataTypeNomisma.csv
   webfrontend:
     url: customDataTypeNomisma.js
     css: customDataTypeNomisma.css
     dependencies:
       - commons-library
-    
+
 base_url_prefix: "webfrontend"
 
 custom_types:
@@ -115,9 +117,9 @@ base_config:
         default: 4
         min: 0
         max: 23
-        position: 2 
+        position: 2
       custom_expires_days:
         type: int
         min: 1
         default: 1
-        position: 4        
+        position: 4
