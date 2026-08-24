@@ -11,18 +11,23 @@
 server:
   install:
   - l10n/customDataTypeNomisma.csv
+  # assembled server-side files, sources in the order written
+  bundles:
+    - out: updater/NomismaUpdater.js
+      sources:
+      - src/updater/NomismaUpdater.js
+      - webfrontend/NomismaUtil.coffee
 webfrontend:
-  coffee1:
-  - webfrontend/CustomDataTypeNomisma.coffee
-  - webfrontend/CustomDataTypeNomismaFacet.coffee
-  - webfrontend/NomismaUtil.coffee
+  # assembled into plugin.webfrontend.url, in this order:
+  # .coffee is compiled (CoffeeScript 1.x), .scss compiled,
+  # anything else taken verbatim
+  bundles:
+    - sources:
+        - webfrontend/CustomDataTypeNomisma.coffee
+        - webfrontend/CustomDataTypeNomismaFacet.coffee
+        - webfrontend/NomismaUtil.coffee
   install:
   - webfrontend/customDataTypeNomisma.css
-build:
-  bundles:
-  - out: updater/NomismaUpdater.js
-    sources:
-    - src/updater/NomismaUpdater.js
-    - webfrontend/NomismaUtil.coffee
-  zip_aliases:
-  - customDataTypeNomisma.zip
+
+zip_aliases:
+- customDataTypeNomisma.zip
